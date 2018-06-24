@@ -1,0 +1,11 @@
+.new-visitor-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.new-visitor-container > * {
+    width: 100%;
+}
+.mat-form-field {
+    display: block;
+}

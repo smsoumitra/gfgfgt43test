@@ -1,0 +1,52 @@
+<div class="new-visitor-container">
+  <div>
+      <div class="button-row">
+          <a mat-fab color="primary" [routerLink]="['/visitors']"><mat-icon>keyboard_arrow_left</mat-icon></a>
+        </div>
+
+  </div>
+  <div>
+    <form [formGroup]="addVisitorForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="form-group">
+            <input matInput placeholder="First Name" formControlName="firstName">
+          </mat-form-field>
+        
+          <mat-form-field class="form-group">
+            <input matInput placeholder="Last Name" formControlName="lastName">
+          </mat-form-field>
+
+          <mat-form-field class="form-group">
+              <input matInput placeholder="Contact Number" formControlName="contactNumber">
+            </mat-form-field>
+        
+          <mat-form-field class="form-group">
+            <input matInput placeholder="Email" formControlName="email">
+          </mat-form-field>
+        
+          <mat-form-field class="form-group">
+            <input matInput placeholder="Occupation" formControlName="occupation">
+          </mat-form-field>
+        
+          <mat-form-field class="form-group">
+            <textarea matInput placeholder="Purpose" formControlName="purpose"></textarea>
+          </mat-form-field>
+        
+          <mat-form-field class="form-group">
+            <mat-select placeholder="ID Type" formControlName="photoId">
+              <mat-option value="option">Driving License</mat-option>
+              <mat-option value="option">PAN</mat-option>
+              <mat-option value="option">Aadhar</mat-option>
+              <mat-option value="option">Passport</mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+          <mat-form-field class="form-group">
+            <textarea matInput placeholder="ID Number" formControlName="idNumber"></textarea>
+          </mat-form-field>
+
+          <div class="button-row float-right">
+              <button type="submit" mat-fab color="primary"><mat-icon>done</mat-icon></button>
+          </div>
+    </form>
+  </div>
+</div>
